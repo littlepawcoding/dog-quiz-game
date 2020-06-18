@@ -17,12 +17,17 @@
 body {
   background-color: #eca802;
   font-family: "Open Sans", sans-serif;
+  text-align: center;
 }
 
 /* main nav styles */
-img {
+.logo {
   width: 80px;
   height: auto;
+  transition: transform 0.8s;
+}
+.logo:hover {
+  transform: rotate(-10deg);
 }
 li,
 a {
