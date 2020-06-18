@@ -20,6 +20,11 @@ body {
   text-align: center;
 }
 
+@font-face {
+  font-family: Bones;
+  src: url(../fonts/Bones2.ttf);
+}
+
 /* main nav styles */
 .logo {
   width: 80px;
@@ -90,6 +95,13 @@ header {
 .active {
   background-color: #4caf50;
   color: white;
+}
+
+/* Score section */
+.score {
+  padding: 15px;
+  font-size: 50px;
+  font-family: Bones;
 }
 
 /* GAME PAGE STYLES */
