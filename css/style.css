@@ -1,6 +1,10 @@
+/* ALL PAGE STYLES */
+
 * {
   box-sizing: border-box;
 }
+
+/* GAME PAGE STYLES */
 
 canvas {
   width: 500px;
