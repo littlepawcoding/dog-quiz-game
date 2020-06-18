@@ -1,7 +1,20 @@
+/* Colours */
+/* #ECA802 yellow
+#00AB54 field green
+#B0413E reddish-pink
+#548687 blue
+#FFFFC7 off white
+#473335 dark purple */
+
 /* ALL PAGE STYLES */
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  color: #ECA802;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* GAME PAGE STYLES */
@@ -12,4 +25,23 @@ canvas {
   margin: auto;
   display: block;
   border: 2px solid black;
+}
+
+@media screen and (max-width: 500px) {
+.container {
+width: 100%;
+height: 100%;
+}
+
+canvas {
+width: 100%;
+height: 100%;
+display:block;
+}
+
+footer {
+display:none;
+}
+
+
 }
