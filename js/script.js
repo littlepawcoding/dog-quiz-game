@@ -37,14 +37,15 @@ function drawBackground() {
 var doggie = document.querySelector("#doggie");
 
 function drawDug() {
-  var width = 20;
-  var height = 20;
+  var width = 140;
+  var height = 140;
   ctx.drawImage(doggie, 100, 100, width, height);
 }
 
-//game
+//GAME
 
 function runGame() {
   drawBackground();
   drawDug();
 }
+setInterval(runGame, 50);
