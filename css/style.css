@@ -6,6 +6,13 @@
 #FFFFC7 off white
 #473335 dark purple */
 
+/* Fonts */
+
+@font-face {
+font-family: "Dog Font";
+src: url("../fonts/GOODDC_.ttf");
+}
+
 /* ALL PAGE STYLES */
 
 * {
@@ -18,11 +25,6 @@ body {
   background-color: #eca802;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-}
-
-@font-face {
-  font-family: GoodDog;
-  src: url(../fonts/GOODDC_.ttf);
 }
 
 /* main nav styles */
@@ -100,19 +102,20 @@ header {
 /* Score section */
 .score {
   padding: 15px;
-  font-size: 50px;
-  font-family: Bones;
+  font-size: 40px;
+  font-family: "Dog Font";
+
 }
 
 /* GAME PAGE STYLES */
 
-canvas {
+/* canvas {
   width: 500px;
   height: 300px;
   margin: auto;
   display: block;
   border: 2px solid black;
-}
+} */
 
 @media screen and (max-width: 500px) {
   .container {
@@ -129,4 +132,17 @@ canvas {
   footer {
     display: none;
   }
+
+  #topnav-web {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
 }
+
+@media screen and (min-width: 500px) {
+  #topnav-mobile {
+    display: none;
+  }
