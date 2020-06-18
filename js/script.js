@@ -1,3 +1,13 @@
+//BURGER MENU
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 //CANVAS
 
 var canvas = document.querySelector("#screen");
@@ -10,33 +20,31 @@ var ctx = canvas.getContext("2d");
 
 //STATE
 
-var state = {
-
-}
+var state = {};
 
 //BACKGROUND
 
-var background=document.querySelector("#background");
+var background = document.querySelector("#background");
 
 function drawBackground() {
-var width = canvas.width;
-var height = canvas.height;
-ctx.drawImage(background, 0, 0, width, height);
+  var width = canvas.width;
+  var height = canvas.height;
+  ctx.drawImage(background, 0, 0, width, height);
 }
 
 //DOGGIE
 
-var doggie=document.querySelector("#doggie");
+var doggie = document.querySelector("#doggie");
 
 function drawDug() {
-var width = 20;
-var height = 20;
-ctx.drawImage(doggie, 100, 100, width, height);
+  var width = 20;
+  var height = 20;
+  ctx.drawImage(doggie, 100, 100, width, height);
 }
 
 //game
 
 function runGame() {
-drawBackground()
-drawDug()
+  drawBackground();
+  drawDug();
 }
