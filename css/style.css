@@ -12,6 +12,18 @@
   font-family: "Dog Font";
   src: url("../fonts/GOODDC_.ttf");
 }
+@font-face {
+  font-family: "Standing Dog Font";
+  src: url("../fonts/KsPuppyPartyRegular-11n0.ttf");
+}
+@font-face {
+  font-family: "Written Style Font";
+  src: url("../fonts/PuppyBellies.ttf");
+}
+@font-face {
+  font-family: "Bone Font";
+  src: url("../fonts/Bones2.ttf");
+}
 
 /* ALL PAGE STYLES */
 
@@ -37,6 +49,9 @@ body {
   border-radius: 5px;
 }
 
+.h1-dug {
+  font-family: "Bone Font";
+}
 .title-background {
   background-image: url(../img/dug.png);
   background-repeat: no-repeat;
