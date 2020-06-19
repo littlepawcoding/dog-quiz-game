@@ -172,3 +172,23 @@ footer {
   padding: 2% 0;
   margin: 1% 0;
 }
+
+@media screen and (max-width: 500px) {
+  footer {
+    display: none;
+  }
+
+  #topnav-web {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  #topnav-mobile {
+    display: none;
+  }
+}
