@@ -20,7 +20,10 @@ var ctx = canvas.getContext("2d");
 
 //STATE
 
-var state = {};
+var state = {
+  doggieX: 100,
+  doggieY: 100,
+};
 
 //BACKGROUND
 
@@ -39,7 +42,9 @@ var doggie = document.querySelector("#doggie");
 function drawDug() {
   var width = 140;
   var height = 140;
-  ctx.drawImage(doggie, 100, 100, width, height);
+  var doggieX = state.doggieX;
+  var doggieY = state.doggieY;
+  ctx.drawImage(doggie, state.doggieX, state.doggieY, width, height);
 }
 
 //GAME
@@ -48,4 +53,46 @@ function runGame() {
   drawBackground();
   drawDug();
 }
+
 setInterval(runGame, 50);
+
+// MOVEMENT
+
+function moveDugLeft() {
+state.doggieX -= 5;
+}
+
+function moveDugRight() {
+state.doggieX += 5;
+}
+
+function moveDugUp() {
+state.doggieY -= 5;
+}
+
+function moveDugDown() {
+state.doggieY += 5;
+}
+
+//EVENT HANDLING
+
+function handleKey(e) {
+
+if (e.key === "ArrowLeft"){
+moveDugLeft();
+}
+
+if (e.key === "ArrowRight"){
+moveDugRight();
+}
+
+if (e.key === "ArrowUp"){
+moveDugUp();
+}
+
+if (e.key === "ArrowDown"){
+moveDugDown();
+}
+}
+
+body.addEventListener("keydown", handleKey);
