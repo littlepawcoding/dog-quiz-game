@@ -1,24 +1,62 @@
+<!-- MAIN GAME PAGE -->
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dog quiz game</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="img/dug.png" />
+    <!-- font -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:800|Open+Sans"
       rel="stylesheet"
     />
+    <!-- css files -->
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/instructions.css" />
+    <!-- font-awesome file for burger menu icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
+
   <body id="body">
-    <header></header>
+    <!-- all content within wrapper -->
+    <div class="wrapper">
+      <header>
+        <img class="logo" src="img/dug.png" alt="logo" />
+        <nav class="topnav" id="topnav-web">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Game</a></li>
+            <li><a href="#">Leaderboard</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <main class="container">
-      <button><a href="game.html">START</a></button>
-    </main>
+      <main class="main-content">
+        <!-- Where the main text will be -->
+        <img src="img/23csLogo.png" alt="23 Code Street logo" />
+        <p class="presents">Presents...</p>
+        <div class="title-background">
+          <h1>
+            Dug's <br />
+            bone-collecting-coding-fun <br />
+            game slash quiz!
+          </h1>
+        </div>
+        <p>Welcome to Dug's coding game!</p>
+        <h2>What would you like to do?</h2>
+        <button>How to play</button>
+        <button>Play game</button>
+        <button>Leaderboard</button>
+      </main>
+    </div>
 
-    <footer></footer>
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
