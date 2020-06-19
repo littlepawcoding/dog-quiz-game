@@ -6,94 +6,17 @@
 #FFFFC7 off white
 #473335 dark purple */
 
-/* Fonts */
+/* INSTRUCTIONS STYLES */
 
-@font-face {
+/* all content within wrapper */
+.wrapper {
+  background-color: white;
+  margin: 0 10%;
+  border-radius: 5px;
+}
+
+.mainContent h1 {
   font-family: "Dog Font";
-  src: url("../fonts/GOODDC_.ttf");
-}
-
-/* ALL PAGE STYLES */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #eca802;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-}
-
-/* main nav styles */
-
-li,
-a {
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 10%;
-  background-color: #00ab54;
-}
-.logo {
-  cursor: pointer;
-  width: 80px;
-  height: auto;
-  transition: transform 0.8s;
-}
-.logo:hover {
-  transform: rotate(-10deg);
-}
-.nav-links {
-  list-style: none;
-}
-.nav-links li {
-  display: inline-block;
-  padding: 0 20px;
-}
-.nav-links li a {
-  transition: all 0.3s ease 0s;
-}
-.nav-links li a:hover {
-  color: #b0413e;
-}
-
-/* MOBILE STYLES */
-/* burger menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-.topnav #myLinks {
-  display: none;
-}
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.active {
-  background-color: #4caf50;
-  color: white;
+  font-size: 70px;
+  margin: 2% 0;
 }
