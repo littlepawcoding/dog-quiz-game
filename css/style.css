@@ -145,3 +145,30 @@ header {
 h1:hover {
   transform: rotate(2deg);
 }
+
+/* get started styles */
+
+.h2get-started {
+  font-family: "Written Style Font";
+  font-size: 40px;
+}
+.get-started-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  font-family: "Written Style Font";
+  font-size: 30px;
+  padding: 8px 10px;
+  margin: 2% 1%;
+  border-radius: 5px;
+}
+
+/* footer styles */
+footer {
+  background-color: #00ab5480;
+  border-radius: 5px;
+  padding: 2% 0;
+  margin: 1% 0;
+}
