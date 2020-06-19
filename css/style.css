@@ -28,14 +28,7 @@ body {
 }
 
 /* main nav styles */
-.logo {
-  width: 80px;
-  height: auto;
-  transition: transform 0.8s;
-}
-.logo:hover {
-  transform: rotate(-10deg);
-}
+
 li,
 a {
   font-size: 16px;
@@ -51,6 +44,12 @@ header {
 }
 .logo {
   cursor: pointer;
+  width: 80px;
+  height: auto;
+  transition: transform 0.8s;
+}
+.logo:hover {
+  transform: rotate(-10deg);
 }
 .nav-links {
   list-style: none;
