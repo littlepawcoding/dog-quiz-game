@@ -9,8 +9,8 @@
 /* Fonts */
 
 @font-face {
-font-family: "Dog Font";
-src: url("../fonts/GOODDC_.ttf");
+  font-family: "Dog Font";
+  src: url("../fonts/GOODDC_.ttf");
 }
 
 /* ALL PAGE STYLES */
@@ -104,7 +104,6 @@ header {
   padding: 15px;
   font-size: 40px;
   font-family: "Dog Font";
-
 }
 
 /* GAME PAGE STYLES */
@@ -146,3 +145,4 @@ header {
   #topnav-mobile {
     display: none;
   }
+}
