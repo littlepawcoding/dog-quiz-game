@@ -49,15 +49,11 @@ body {
   border-radius: 5px;
 }
 
-.h1-dug {
-  font-family: "Written Style Font";
-}
 .title-background {
   background-image: url(../img/dug.png);
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .main-content img {
   width: 300px;
   height: auto;
@@ -67,10 +63,15 @@ body {
   text-transform: uppercase;
   font-size: 20px;
 }
-
+.h1-dug {
+  font-family: "Dog Font";
+  font-size: 90px;
+  text-transform: uppercase;
+}
 .main-content h1 {
   font-family: "Written Style Font";
-  font-size: 70px;
+  font-size: 55px;
+  line-height: 5rem;
   margin: 2% 0;
   padding: 5% 0;
   background-color: rgb(255, 255, 255, 0.5);
@@ -78,7 +79,7 @@ body {
   transition: transform 0.8s;
 }
 h1:hover {
-  transform: rotate(10deg);
+  transform: rotate(2deg);
 }
 
 /* main nav styles */
