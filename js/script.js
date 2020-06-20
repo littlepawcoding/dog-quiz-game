@@ -1,4 +1,5 @@
 //BURGER MENU
+
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -23,6 +24,7 @@ var ctx = canvas.getContext("2d");
 var state = {
   doggieX: 100,
   doggieY: 100,
+  bonePositions: [],
 };
 
 //BACKGROUND
@@ -47,14 +49,22 @@ function drawDug() {
   ctx.drawImage(doggie, state.doggieX, state.doggieY, width, height);
 }
 
-//GAME
+//BONES
 
-function runGame() {
-  drawBackground();
-  drawDug();
+var bone = document.querySelector("#bone");
+
+function drawBone(boneInfo) {
+  var width = 192;
+  var height = 94;
+ctx.drawImage(bone, 200, 200, width, height);
 }
 
-setInterval(runGame, 50);
+// function boneGenerator() {
+// for (var i = 0; i < state.bonePositions.length; i++) {
+// var bone = state.bonePositions[i];
+// drawBone(bone);
+// }
+// }
 
 // MOVEMENT
 
@@ -96,3 +106,13 @@ moveDugDown();
 }
 
 body.addEventListener("keydown", handleKey);
+
+//GAME
+
+function runGame() {
+  drawBackground();
+  drawDug();
+  drawBone();
+}
+
+setInterval(runGame, 50);
