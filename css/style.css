@@ -153,8 +153,8 @@ header {
 .play-button {
   cursor: pointer;
   border-radius: 10px;
-  background: none;
-  /* border: none; */
+  background-color: #eca802;
+  border: none;
 
   margin: 1.5%;
   padding: 2% 2.5%;
@@ -163,6 +163,7 @@ header {
 }
 .play-button:hover {
   transform: rotate(3deg);
+  background-color: #7dcd90;
 }
 .play-button a {
   font-family: "Written Style Font";
