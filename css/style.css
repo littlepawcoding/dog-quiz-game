@@ -130,9 +130,9 @@ header {
 }
 
 .title-background {
-  background-image: url(../img/dug.png);
-  background-repeat: no-repeat;
+  background: url("../img/dug.png") no-repeat;
   background-position: center;
+  background-size: 700px;
 }
 .h1-dug {
   font-family: "Dog Font";
@@ -185,31 +185,110 @@ footer {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1041px) {
+@media screen and (max-width: 1400px) {
+  /* Dug background */
+  .title-background {
+    background-size: 600px;
+  }
+  /* h1 Dug */
+  .h1-dug {
+    font-size: 90px;
+  }
+  /* header text */
+  .main-content h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 4rem;
+    padding: 7% 0;
+  }
+  /* play button */
+  .play-button {
+    margin: 1.5%;
+    padding: 2% 2.5%;
+  }
+  .play-button a {
+    font-size: 45px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* Dug background */
+  .title-background {
+    background-size: 500px;
+  }
+  /* h1 Dug */
+  .h1-dug {
+    font-size: 80px;
+  }
+  /* header text */
+  .main-content h1 {
+    font-size: 45px;
+    letter-spacing: 1px;
+    line-height: 4rem;
+    padding: 7% 0;
+  }
+  /* play button */
+  .play-button {
+    margin: 2.5%;
+    padding: 2% 2.5%;
+  }
+  .play-button a {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* Dug background */
+  .title-background {
+    background-size: 400px;
+  }
+  /* h1 Dug */
+  .h1-dug {
+    font-size: 75px;
+  }
+  /* header text */
   .main-content h1 {
     font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 3.5rem;
+    padding: 7% 0;
+  }
+  /* play button */
+  .play-button {
+    margin: 2.5%;
+    padding: 2% 2.5%;
   }
   .play-button a {
     font-size: 35px;
     letter-spacing: 1px;
   }
 }
-@media screen and (max-width: 500px) {
-  footer {
-    display: none;
-  }
 
-  #topnav-web {
-    display: none;
+@media screen and (max-width: 560px) {
+  /* Dug background */
+  .title-background {
+    background-size: 350px;
   }
-
-  .logo {
-    display: none;
+  /* h1 Dug */
+  .h1-dug {
+    font-size: 65px;
   }
-}
-
-@media screen and (min-width: 500px) {
-  #topnav-mobile {
-    display: none;
+  /* header text */
+  .main-content h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    line-height: 3.5rem;
+    padding: 7% 0;
+  }
+  /* play button */
+  .play-button {
+    margin: 2.5%;
+    padding: 2% 3%;
+  }
+  .play-button a {
+    font-size: 30px;
+    letter-spacing: 1px;
   }
 }
