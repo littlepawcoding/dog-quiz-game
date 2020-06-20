@@ -144,7 +144,7 @@ header {
   font-size: 55px;
   letter-spacing: 1px;
   line-height: 5rem;
-  padding: 9% 0;
+  padding: 8% 0;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 5px;
 }
@@ -184,6 +184,16 @@ footer {
   line-height: 20px;
 }
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 1041px) {
+  .main-content h1 {
+    font-size: 40px;
+  }
+  .play-button a {
+    font-size: 35px;
+    letter-spacing: 1px;
+  }
+}
 @media screen and (max-width: 500px) {
   footer {
     display: none;
