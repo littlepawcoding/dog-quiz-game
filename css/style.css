@@ -122,11 +122,11 @@ header {
   border-radius: 5px;
 }
 
-.title-background {
+/* .title-background {
   background-image: url(../img/dug.png);
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 .h1-dug {
   font-family: "Dog Font";
   font-size: 100px;
