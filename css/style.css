@@ -146,18 +146,9 @@ h1:hover {
   transform: rotate(2deg);
 }
 
-/* get started styles */
+/* homepage play button styles */
 
-.h2get-started {
-  font-family: "Written Style Font";
-  font-size: 40px;
-}
-.get-started-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.button {
+.play-button {
   font-family: "Written Style Font";
   font-size: 30px;
   padding: 8px 10px;
