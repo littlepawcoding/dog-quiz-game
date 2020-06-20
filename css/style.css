@@ -152,24 +152,23 @@ header {
 
 .play-button {
   cursor: pointer;
-  background: url("../img/bone-home.png") no-repeat;
-  background-size: 450px;
-  border: none;
-  background-color: none;
+  border-radius: 10px;
+  background: none;
+  /* border: none; */
 
-  font-family: "Written Style Font";
-  font-size: 40px;
-  color: black;
-  letter-spacing: 1.5px;
-
-  padding: 7% 6%;
-  margin: 1% 1%;
-  border-radius: 5px;
+  margin: 1.5%;
+  padding: 2% 2.5%;
 
   transition: transform 0.8s;
 }
 .play-button:hover {
   transform: rotate(3deg);
+}
+.play-button a {
+  font-family: "Written Style Font";
+  font-size: 50px;
+  color: black;
+  letter-spacing: 1.5px;
 }
 
 /* footer styles */
