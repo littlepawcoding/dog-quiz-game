@@ -121,7 +121,7 @@ header {
 
 /* all content within wrapper */
 .wrapper {
-  border-top: 45px solid #4caf5080;
+  border-top: 45px solid #7dcd90;
   /* rgb to get the white background a little transparent */
   background: rgb(255, 255, 255, 0.8);
   margin: 0 10%;
@@ -179,6 +179,10 @@ footer {
   border-radius: 5px;
   padding: 2% 0;
   margin: 1% 0;
+
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 
 @media screen and (max-width: 500px) {
