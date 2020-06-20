@@ -121,10 +121,11 @@ header {
 
 /* all content within wrapper */
 .wrapper {
-  border-top: 45px solid #7dcd90;
+  /* this border is for the header instead of the nav bar */
+  /* border-top: 45px solid #7dcd90; */
   /* rgb to get the white background a little transparent */
   background: rgb(255, 255, 255, 0.8);
-  margin: 0 10%;
+  margin: 3% 10%;
   border-radius: 5px;
 }
 
@@ -143,7 +144,7 @@ header {
   font-size: 55px;
   letter-spacing: 1px;
   line-height: 5rem;
-  padding: 6% 0;
+  padding: 9% 0;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 5px;
 }
@@ -153,7 +154,7 @@ header {
 .play-button {
   cursor: pointer;
   border-radius: 10px;
-  background-color: #eca802;
+  background-color: #7dcd90;
   border: none;
 
   margin: 1.5%;
@@ -163,7 +164,7 @@ header {
 }
 .play-button:hover {
   transform: rotate(3deg);
-  background-color: #7dcd90;
+  background-color: #eca802;
 }
 .play-button a {
   font-family: "Written Style Font";
