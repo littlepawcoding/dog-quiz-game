@@ -41,6 +41,7 @@ body {
 
 /* INDEX STYLES */
 
+/* hiding the nav styles for the homepage */
 .homepage-nav {
   display: none;
 }
@@ -120,17 +121,18 @@ header {
 
 /* all content within wrapper */
 .wrapper {
+  border-top: 45px solid #4caf5080;
   /* rgb to get the white background a little transparent */
   background: rgb(255, 255, 255, 0.8);
   margin: 0 10%;
   border-radius: 5px;
 }
 
-/* .title-background {
+.title-background {
   background-image: url(../img/dug.png);
   background-repeat: no-repeat;
   background-position: center;
-} */
+}
 .h1-dug {
   font-family: "Dog Font";
   font-size: 100px;
@@ -140,8 +142,8 @@ header {
   font-family: "Written Style Font";
   font-size: 55px;
   line-height: 5rem;
-  margin: 2% 0;
-  padding: 5% 0;
+  /* margin: 2% 0; */
+  padding: 6% 0;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 5px;
 }
