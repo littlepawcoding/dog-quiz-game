@@ -41,6 +41,10 @@ body {
 
 /* INDEX STYLES */
 
+.homepage-nav {
+  display: none;
+}
+
 /* nav styles */
 li,
 a {
