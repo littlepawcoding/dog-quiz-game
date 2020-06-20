@@ -56,12 +56,16 @@ var bone = document.querySelector("#bone");
 function drawBone(boneInfo) {
   var width = 192;
   var height = 94;
-ctx.drawImage(bone, 200, 200, width, height);
+  var xPosition = Math.random() * (canvas.width - 25);
+  var yPosition = Math.random() * (canvas.height - 25);
+ctx.drawImage(bone, xPosition, yPosition, width, height);
 }
 
+// DOESN'T WORK YET
+
 // function boneGenerator() {
-// for (var i = 0; i < state.bonePositions.length; i++) {
-// var bone = state.bonePositions[i];
+// for (var i = 0; i < state.bonePositions.length; i = i + 1) {
+// var box = state.bonePositions[i];
 // drawBone(bone);
 // }
 // }
