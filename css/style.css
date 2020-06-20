@@ -140,20 +140,31 @@ header {
   padding: 5% 0;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 5px;
-  transition: transform 0.8s;
-}
-h1:hover {
-  transform: rotate(2deg);
 }
 
 /* homepage play button styles */
 
 .play-button {
+  cursor: pointer;
+  background: url("../img/bone-home.png") no-repeat;
+  background-size: 450px;
+  border: none;
+  background-color: none;
+
   font-family: "Written Style Font";
-  font-size: 30px;
-  padding: 8px 10px;
+  font-size: 40px;
+  color: black;
+  letter-spacing: 1.5px;
+
+  padding: 7% 6%;
   margin: 2% 1%;
   border-radius: 5px;
+
+  transition: transform 0.8s;
+}
+.play-button:hover {
+  transform: rotate(3deg);
+  /* background-color: yellow; */
 }
 
 /* footer styles */
