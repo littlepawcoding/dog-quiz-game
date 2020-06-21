@@ -36,7 +36,7 @@
       <div class="scores-table">
         <table id="tableScore">
           <tr>
-            <th>Position</th>
+            <th>No.</th>
             <th>Name</th>
             <th>Score</th>
           </tr>
@@ -51,9 +51,12 @@
             <td>500</td>
           </tr>
         </table>
-        <form>
-          <input type="button" onclick="updateTable()" value="Add score" />
-        </form>
+        <button type="button" class="add-score" onclick="addScore()">
+          Add score
+        </button>
+        <button type="button" class="remove-score" onclick="removeScore()">
+          Remove score
+        </button>
       </div>
       <footer>
         Made by students from 23 Code Street <br />With a bit of &#10084; and a
@@ -61,6 +64,6 @@
       </footer>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/highScores.js"></script>
   </body>
 </html>
