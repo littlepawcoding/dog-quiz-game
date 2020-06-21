@@ -72,3 +72,11 @@ header {
   background-color: #4caf50;
   color: white;
 }
+
+/* main section */
+
+.leaderboard-text h1 {
+  font-family: "Paw Font";
+  font-size: 50px;
+  letter-spacing: 1.5px;
+}

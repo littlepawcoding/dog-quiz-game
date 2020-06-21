@@ -17,7 +17,7 @@
   src: url("../fonts/KsPuppyPartyRegular-11n0.ttf");
 }
 @font-face {
-  font-family: "Written Style Font";
+  font-family: "Paw Font";
   src: url("../fonts/PuppyBellies.ttf");
 }
 @font-face {
@@ -62,7 +62,7 @@ body {
   text-transform: uppercase;
 }
 .main-content h1 {
-  font-family: "Written Style Font";
+  font-family: "Paw Font";
   font-size: 55px;
   letter-spacing: 1px;
   line-height: 5rem;
@@ -89,7 +89,7 @@ body {
   background-color: #eca802;
 }
 .play-button a {
-  font-family: "Written Style Font";
+  font-family: "Paw Font";
   font-size: 50px;
   color: black;
   letter-spacing: 1.5px;
