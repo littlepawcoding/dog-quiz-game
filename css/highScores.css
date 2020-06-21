@@ -6,13 +6,7 @@
 #FFFFC7 off white
 #473335 dark purple */
 
-/* nav styles */
-li,
-a {
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-}
+/* HEADER/NAV styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -22,7 +16,7 @@ header {
   background-color: #00ab5480;
   border-radius: 5px;
 }
-.logo {
+.logo img {
   cursor: pointer;
   width: 80px;
   height: auto;
@@ -30,6 +24,26 @@ header {
 }
 .logo:hover {
   transform: rotate(-10deg);
+}
+.nav {
+  background-color: #333;
+  position: relative;
+  border-radius: 5px;
+}
+.nav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.active {
+  background-color: #4caf50;
+  color: white;
 }
 .nav-links {
   list-style: none;
@@ -40,43 +54,6 @@ header {
 }
 .nav-links li a {
   transition: all 0.3s ease 0s;
-}
-.nav-links li a:hover {
-  color: #b0413e;
-}
-
-/* MOBILE STYLES */
-/* burger menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-  border-radius: 5px;
-}
-.topnav #myLinks {
-  display: none;
-}
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.active {
-  background-color: #4caf50;
-  color: white;
 }
 
 /* main section */
@@ -124,6 +101,7 @@ table th {
   margin-bottom: 5%;
 
   transition: transform 0.8s;
+  transition: all 0.3s ease 0s;
 }
 .add-score:hover {
   transform: rotate(3deg);
@@ -132,4 +110,164 @@ table th {
 .remove-score:hover {
   transform: rotate(-3deg);
   background-color: #eca802;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1400px) {
+  /* NAV styles */
+  header {
+    padding: 7px 9%;
+  }
+  .logo img {
+    width: 75px;
+  }
+  .nav a {
+    padding: 13px 13px;
+    font-size: 15px;
+  }
+
+  .scores-text h1 {
+    font-size: 40px;
+
+    margin: 2.5%;
+  }
+  .scores-table table {
+    margin: 2%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+  table th {
+    font-size: 40px;
+    padding: 4.5%;
+    margin-bottom: 2%;
+  }
+  .add-score,
+  .remove-score {
+    font-size: 25px;
+
+    padding: 1% 1.5%;
+    margin-bottom: 4.5%;
+  }
+  footer {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /* NAV styles */
+
+  .logo img {
+    width: 65px;
+  }
+  .nav a {
+    font-size: 13px;
+    padding: 11px 11px;
+  }
+  .scores-text h1 {
+    font-size: 38px;
+    margin: 2.2%;
+  }
+  .scores-table table {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 2%;
+  }
+  table th {
+    font-size: 40px;
+    padding: 4.5%;
+    margin-bottom: 2%;
+  }
+  .add-score,
+  .remove-score {
+    font-size: 25px;
+
+    padding: 1% 1.5%;
+    margin-bottom: 4.5%;
+  }
+  footer {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* NAV styles */
+  header {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    border-radius: 5px;
+  }
+  .topnav #myLinks {
+    display: none;
+  }
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .active {
+    background-color: #4caf50;
+    color: white;
+  }
+  .logo img {
+    width: 65px;
+  }
+  .nav a {
+    font-size: 13px;
+    padding: 11px 11px;
+  }
+  .scores-text h1 {
+    font-size: 38px;
+    margin: 2.2%;
+  }
+  .scores-table table {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 2%;
+  }
+  table th {
+    font-size: 40px;
+    padding: 4.5%;
+    margin-bottom: 2%;
+  }
+  .add-score,
+  .remove-score {
+    font-size: 25px;
+
+    padding: 1% 1.5%;
+    margin-bottom: 4.5%;
+  }
+  footer {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 560px) {
 }
