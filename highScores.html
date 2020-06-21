@@ -34,7 +34,7 @@
         <h1>High Scores!</h1>
       </div>
       <div class="scores-table">
-        <table>
+        <table id="tableScore">
           <tr>
             <th>Position</th>
             <th>Name</th>
@@ -51,6 +51,9 @@
             <td>500</td>
           </tr>
         </table>
+        <form>
+          <input type="button" onclick="updateTable()" value="Add score" />
+        </form>
       </div>
       <footer>
         Made by students from 23 Code Street <br />With a bit of &#10084; and a

@@ -79,3 +79,10 @@ header {
   font-size: 50px;
   letter-spacing: 1.5px;
 }
+.scores-table table {
+  margin: 30px;
+  text-align: center;
+}
+
+#tableScore {
+}
