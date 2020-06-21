@@ -96,12 +96,14 @@ header {
   letter-spacing: 1px;
   line-height: 40px;
 }
+
 table th {
   font-family: "Dog Font";
   font-size: 50px;
+  background-color: #eca802;
 
   padding: 5%;
-  background-color: #eca802;
+  margin-bottom: 2%;
   border-radius: 5px;
 }
 .add-score,
@@ -113,12 +115,13 @@ table th {
 
   font-family: "Paw Font";
   font-size: 30px;
+  font-weight: bold;
   color: black;
   letter-spacing: 1.5px;
   text-decoration: none;
 
-  margin: 1.5%;
   padding: 1.5% 2%;
+  margin-bottom: 5%;
 
   transition: transform 0.8s;
 }
@@ -130,26 +133,3 @@ table th {
   transform: rotate(-3deg);
   background-color: #eca802;
 }
-
-/* .play-button {
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: #7dcd90;
-  border: none;
-
-  margin: 1.5%;
-  padding: 2% 2.5%;
-
-  transition: transform 0.8s;
-}
-.play-button:hover {
-  transform: rotate(3deg);
-  background-color: #eca802;
-}
-.play-button a {
-  font-family: "Paw Font";
-  font-size: 50px;
-  color: black;
-  letter-spacing: 1.5px;
-  text-decoration: none;
-} */
