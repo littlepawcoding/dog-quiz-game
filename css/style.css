@@ -156,6 +156,25 @@ footer {
 
 /* HOW TO PLAY PAGE STYLES */
 
+.ready-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 3%;
+  margin: 2% 30%;
+}
+
+.ready-text {
+  /* align-items: center; */
+  font-family: "Paw Font";
+  font-size: 50px;
+  letter-spacing: 1.5px;
+  margin-right: 6%;
+}
+
 /* play button styles - takes user to game page */
 .play-button {
   cursor: pointer;
@@ -170,8 +189,7 @@ footer {
   letter-spacing: 1.5px;
   text-decoration: none;
 
-  padding: 1.5% 2%;
-  margin-bottom: 5%;
+  padding: 4% 5%;
 
   transition: transform 0.8s;
   transition: all 0.3s ease 0s;
