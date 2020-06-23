@@ -183,13 +183,13 @@ footer {
   border: none;
 
   font-family: "Paw Font";
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   color: black;
   letter-spacing: 1.5px;
   text-decoration: none;
 
-  padding: 4% 5%;
+  padding: 5%;
 
   transition: transform 0.8s;
   transition: all 0.3s ease 0s;
@@ -200,7 +200,7 @@ footer {
 }
 .play-button a {
   font-family: "Paw Font";
-  font-size: 40px;
+  font-size: 30px;
   color: black;
   letter-spacing: 1.5px;
   text-decoration: none;
