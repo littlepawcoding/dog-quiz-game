@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dog quiz game</title>
+    <title>The game!</title>
     <!-- favicon -->
     <link rel="shortcut icon" type="image/jpg" href="img/dug.png" />
     <!-- font -->
@@ -16,58 +16,48 @@
     <!-- css files -->
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/game.css" />
-
-    <!-- font-awesome file for burger menu icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <!-- <link rel="stylesheet" type="text/css" href="css/game.css" /> -->
   </head>
   <body id="body">
-    <!-- hiding the nav for the moment will i fix the styling -->
-    <!-- <header>
-      <img class="logo" src="img/dug.png" alt="logo" />
-      <nav class="topnav" id="topnav-web">
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Game</a></li>
-          <li><a href="#">Leaderboard</a></li>
-        </ul>
-      </nav>
-
-      <nav class="topnav" id="topnav-mobile">
-        <a href="#home" class="active">logo</a>
-        <div id="myLinks">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#game">Game</a></li>
-            <li><a href="#leaderboard">Leaderboard</a></li>
-          </ul>
+    <!-- all content within wrapper -->
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <a href="index.html"><img src="img/dug.png" alt="logo" /></a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </nav>
-    </header> -->
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="instructions.html">How to play</a></li>
+            <li><a href="game.html">Go to game</a></li>
+            <li><a href="highScores.html">High Scores</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="h1-text">
+        <h1>The game!</h1>
+      </div>
+      <div class="score">
+        Score: 0
+      </div>
 
-    <div class="score">
-      <h3>Score: 0</h3>
-    </div>
-    <main class="container">
-      <canvas id="screen"> </canvas>
-    </main>
-    <div style="display: none;">
-      <img id="background" alt="background" src="img/canvas.jpg" />
-    </div>
-    <div style="display: none;">
-      <img id="doggie" alt="doggie" src="img/dug.png" />
-    </div>
-    <div style="display: none;">
-      <img id="bone" alt="bone" src="img/bone.png" />
-    </div>
-    <footer>footer</footer>
+      <main class="container">
+        <canvas id="screen"> </canvas>
+        <div style="display: none;">
+          <img id="background" alt="background" src="img/canvas.jpg" />
+        </div>
+        <div style="display: none;">
+          <img id="doggie" alt="doggie" src="img/dug.png" />
+        </div>
+        <div style="display: none;">
+          <img id="bone" alt="bone" src="img/bone.png" />
+        </div>
+      </main>
 
+      <footer>
+        Made by students from 23 Code Street <br />With a bit of &#10084; and a
+        lot of &#x2615;
+      </footer>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
