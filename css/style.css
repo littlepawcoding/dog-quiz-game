@@ -38,6 +38,10 @@ body {
   text-align: center;
 }
 
+.wrapper {
+  background-color: #ffffff80;
+  margin: 0 10%;
+}
 /* NAV/FOOTER STYLES */
 
 /* HEADER/NAV styles */
@@ -112,13 +116,12 @@ footer {
   margin: 3% 20%;
   border-radius: 5px;
 }
-.dug-logo {
+.dug-sign-logo {
   width: 450px;
   height: auto;
   padding: 2.5% 0;
 }
 
-/* play button styles */
 .play-button {
   cursor: pointer;
   border-radius: 10px;
@@ -141,11 +144,6 @@ footer {
   color: black;
   letter-spacing: 1.5px;
   text-decoration: none;
-}
-
-.wrapper {
-  background-color: #ffffff90;
-  border-radius: 5px;
 }
 
 /* MEDIA QUERIES */
