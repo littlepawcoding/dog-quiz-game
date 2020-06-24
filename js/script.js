@@ -118,4 +118,4 @@ function runGame() {
   drawBone();
 }
 
-setInterval(runGame, 50);
+setInterval(runGame, 1000);
