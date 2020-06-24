@@ -120,14 +120,14 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #ffffff90;
-  margin: 3% 20%;
+  margin: 1.5% 15%;
   border-radius: 5px;
 }
 .dug-sign-logo {
   width: 450px;
   height: auto;
-  padding: 2.5% 0;
-  animation: rockingDug 2s infinite;
+  padding: 1.5% 0;
+  animation: rockingDug 2.5s infinite;
 }
 @keyframes rockingDug {
   0%,
@@ -146,7 +146,7 @@ footer {
   border: 2px solid #7dcd90;
 
   padding: 2% 2.5%;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
 
   transition: all 0.3s ease 0s;
   transition: transform 0.8s;
