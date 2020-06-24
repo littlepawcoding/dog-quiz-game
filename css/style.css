@@ -58,11 +58,20 @@ header {
   cursor: pointer;
   width: 80px;
   height: auto;
-  transition: transform 0.8s;
+  animation: rockingDugLogo 2.5s infinite;
 }
-.logo:hover {
+@keyframes rockingDugLogo {
+  0%,
+  100% {
+    transform: rotate(-7deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+/* .logo:hover {
   transform: rotate(-10deg);
-}
+} */
 .nav {
   background-color: #333;
   position: relative;
