@@ -12,8 +12,8 @@ function myFunction() {
 //CANVAS
 
 var canvas = document.querySelector("#screen");
-canvas.width = 1000;
-canvas.height = 1000;
+canvas.width = 900;
+canvas.height = 600;
 
 var ctx = canvas.getContext("2d");
 
@@ -54,11 +54,11 @@ function drawDug() {
 var bone = document.querySelector("#bone");
 
 function drawBone(boneInfo) {
-  var width = 192;
+  var width = 180;
   var height = 94;
   var xPosition = Math.random() * (canvas.width - 25);
   var yPosition = Math.random() * (canvas.height - 25);
-ctx.drawImage(bone, xPosition, yPosition, width, height);
+  ctx.drawImage(bone, xPosition, yPosition, width, height);
 }
 
 // DOESN'T WORK YET
@@ -73,40 +73,39 @@ ctx.drawImage(bone, xPosition, yPosition, width, height);
 // MOVEMENT
 
 function moveDugLeft() {
-state.doggieX -= 5;
+  state.doggieX -= 5;
 }
 
 function moveDugRight() {
-state.doggieX += 5;
+  state.doggieX += 5;
 }
 
 function moveDugUp() {
-state.doggieY -= 5;
+  state.doggieY -= 5;
 }
 
 function moveDugDown() {
-state.doggieY += 5;
+  state.doggieY += 5;
 }
 
 //EVENT HANDLING
 
 function handleKey(e) {
+  if (e.key === "ArrowLeft") {
+    moveDugLeft();
+  }
 
-if (e.key === "ArrowLeft"){
-moveDugLeft();
-}
+  if (e.key === "ArrowRight") {
+    moveDugRight();
+  }
 
-if (e.key === "ArrowRight"){
-moveDugRight();
-}
+  if (e.key === "ArrowUp") {
+    moveDugUp();
+  }
 
-if (e.key === "ArrowUp"){
-moveDugUp();
-}
-
-if (e.key === "ArrowDown"){
-moveDugDown();
-}
+  if (e.key === "ArrowDown") {
+    moveDugDown();
+  }
 }
 
 body.addEventListener("keydown", handleKey);
@@ -116,7 +115,7 @@ body.addEventListener("keydown", handleKey);
 function runGame() {
   drawBackground();
   drawDug();
-  drawBone();
+  // drawBone();
 }
 
 setInterval(runGame, 50);
