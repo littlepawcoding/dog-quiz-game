@@ -54,8 +54,8 @@ function drawDug() {
 var bone = document.querySelector("#bone");
 
 function drawBone(boneInfo) {
-  var width = 180;
-  var height = 94;
+  var width = 50;
+  var height = 30;
   var xPosition = Math.random() * (canvas.width - 25);
   var yPosition = Math.random() * (canvas.height - 25);
   ctx.drawImage(bone, xPosition, yPosition, width, height);
@@ -115,7 +115,7 @@ body.addEventListener("keydown", handleKey);
 function runGame() {
   drawBackground();
   drawDug();
-  // drawBone();
+  drawBone();
 }
 
 setInterval(runGame, 50);
