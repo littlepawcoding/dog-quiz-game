@@ -240,15 +240,15 @@ footer {
 
   position: absolute;
   top: 25%;
-  right: 20%;
+  right: 25%;
 
   border: 5px solid #eca802;
   border-radius: 10px;
   padding: 0.5% 0.9%;
 }
 canvas {
-  width: 80%;
-  height: 80%;
+  /* width: 80%;
+  height: 80%; */
   border-radius: 5px;
 }
 

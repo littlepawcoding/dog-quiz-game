@@ -13,7 +13,7 @@ function myFunction() {
 
 var canvas = document.querySelector("#screen");
 canvas.width = 900;
-canvas.height = 600;
+canvas.height = 500;
 
 var ctx = canvas.getContext("2d");
 
@@ -42,8 +42,8 @@ function drawBackground() {
 var doggie = document.querySelector("#doggie");
 
 function drawDug() {
-  var width = 140;
-  var height = 140;
+  var width = 85;
+  var height = 80;
   var doggieX = state.doggieX;
   var doggieY = state.doggieY;
   ctx.drawImage(doggie, state.doggieX, state.doggieY, width, height);
