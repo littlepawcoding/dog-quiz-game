@@ -119,7 +119,7 @@ footer {
   font-family: "Paw Font";
   font-size: 50px;
   letter-spacing: 1.5px;
-  margin: 3%;
+  margin: 1.5%;
 }
 
 /* INDEX PAGE STYLES */
@@ -227,15 +227,24 @@ footer {
 
 /* THE GAME PAGE STYLES */
 /* ideally the score would lay in the top corner on the canvas but not sure how to do that yet! */
-.score {
-  font-size: 40px;
-  font-family: "Dog Font";
-}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 2%;
+}
+.score {
+  font-size: 50px;
+  font-family: "Dog Font";
+
+  position: absolute;
+  top: 25%;
+  right: 20%;
+
+  border: 5px solid #eca802;
+  border-radius: 10px;
+  padding: 0.5% 0.9%;
 }
 canvas {
   width: 80%;
