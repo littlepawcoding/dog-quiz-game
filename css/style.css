@@ -127,6 +127,16 @@ footer {
   width: 450px;
   height: auto;
   padding: 2.5% 0;
+  animation: rockingDug 2s infinite;
+}
+@keyframes rockingDug {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
 }
 /* click to play button styles on homepage - takes user to how to play plage */
 .click-to-play-button {
