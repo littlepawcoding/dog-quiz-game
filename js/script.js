@@ -70,7 +70,7 @@ ctx.drawImage(bone, xPosition, yPosition, width, height);
 
 function bonePositions() {
 var numberX = Math.random() * (canvas.width - 25);
-var numberY = Math.random() * (canvas.width - 25);
+var numberY = Math.random() * (canvas.height - 25);
 state.bonePosition.x = numberX;
 state.bonePosition.y = numberY;
 }
@@ -121,13 +121,13 @@ body.addEventListener("keydown", handleKey);
 function runGame() {
   drawBackground();
   drawDug();
+  drawBone();
 }
 
 setInterval(runGame, 50);
 
 function animateBone() {
 bonePositions();
-drawBone();
 }
 
 setInterval(animateBone, 2000);
