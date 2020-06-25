@@ -16,8 +16,8 @@ function myFunction() {
 //CANVAS
 
 var canvas = document.querySelector("#screen");
-canvas.width = 1000;
-canvas.height = 1000;
+canvas.width = 500;
+canvas.height = 500;
 
 var ctx = canvas.getContext("2d");
 
@@ -49,8 +49,8 @@ function drawBackground() {
 var doggie = document.querySelector("#doggie");
 
 function drawDug() {
-  var width = 140;
-  var height = 140;
+  var width = 84;
+  var height = 84;
   var doggieX = state.doggieX;
   var doggieY = state.doggieY;
   ctx.drawImage(doggie, state.doggieX, state.doggieY, width, height);
@@ -61,8 +61,8 @@ function drawDug() {
 var bone = document.querySelector("#bone");
 
 function drawBone(boneInfo) {
-  var width = 192;
-  var height = 94;
+  var width = 96;
+  var height = 47;
   var xPosition = state.bonePosition.x;
   var yPosition = state.bonePosition.y;
 ctx.drawImage(bone, xPosition, yPosition, width, height);
