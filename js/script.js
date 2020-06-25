@@ -1,3 +1,7 @@
+//GLOBAL VARIABLES
+
+var score = 0;
+
 //BURGER MENU
 
 function myFunction() {
@@ -12,8 +16,8 @@ function myFunction() {
 //CANVAS
 
 var canvas = document.querySelector("#screen");
-canvas.width = 900;
-canvas.height = 500;
+canvas.width = 1000;
+canvas.height = 1000;
 
 var ctx = canvas.getContext("2d");
 
@@ -24,7 +28,10 @@ var ctx = canvas.getContext("2d");
 var state = {
   doggieX: 100,
   doggieY: 100,
-  bonePositions: [],
+  bonePosition: {
+  x: 0,
+  y: 0,
+}
 };
 
 //BACKGROUND
@@ -42,8 +49,8 @@ function drawBackground() {
 var doggie = document.querySelector("#doggie");
 
 function drawDug() {
-  var width = 85;
-  var height = 80;
+  var width = 140;
+  var height = 140;
   var doggieX = state.doggieX;
   var doggieY = state.doggieY;
   ctx.drawImage(doggie, state.doggieX, state.doggieY, width, height);
@@ -54,58 +61,57 @@ function drawDug() {
 var bone = document.querySelector("#bone");
 
 function drawBone(boneInfo) {
-  var width = 50;
-  var height = 30;
-  var xPosition = Math.random() * (canvas.width - 25);
-  var yPosition = Math.random() * (canvas.height - 25);
-  ctx.drawImage(bone, xPosition, yPosition, width, height);
+  var width = 192;
+  var height = 94;
+  var xPosition = state.bonePosition.x;
+  var yPosition = state.bonePosition.y;
+ctx.drawImage(bone, xPosition, yPosition, width, height);
 }
 
-// DOESN'T WORK YET
-
-// function boneGenerator() {
-// for (var i = 0; i < state.bonePositions.length; i = i + 1) {
-// var box = state.bonePositions[i];
-// drawBone(bone);
-// }
-// }
+function bonePositions() {
+var numberX = Math.random() * (canvas.width - 25);
+var numberY = Math.random() * (canvas.width - 25);
+state.bonePosition.x = numberX;
+state.bonePosition.y = numberY;
+}
 
 // MOVEMENT
 
 function moveDugLeft() {
-  state.doggieX -= 5;
+state.doggieX -= 5;
 }
 
 function moveDugRight() {
-  state.doggieX += 5;
+state.doggieX += 5;
 }
 
 function moveDugUp() {
-  state.doggieY -= 5;
+state.doggieY -= 5;
 }
 
 function moveDugDown() {
-  state.doggieY += 5;
+state.doggieY += 5;
 }
 
 //EVENT HANDLING
 
 function handleKey(e) {
-  if (e.key === "ArrowLeft") {
-    moveDugLeft();
-  }
 
-  if (e.key === "ArrowRight") {
-    moveDugRight();
-  }
+if (e.key === "ArrowLeft"){
+moveDugLeft();
+}
 
-  if (e.key === "ArrowUp") {
-    moveDugUp();
-  }
+if (e.key === "ArrowRight"){
+moveDugRight();
+}
 
-  if (e.key === "ArrowDown") {
-    moveDugDown();
-  }
+if (e.key === "ArrowUp"){
+moveDugUp();
+}
+
+if (e.key === "ArrowDown"){
+moveDugDown();
+}
 }
 
 body.addEventListener("keydown", handleKey);
@@ -115,7 +121,21 @@ body.addEventListener("keydown", handleKey);
 function runGame() {
   drawBackground();
   drawDug();
-  drawBone();
 }
 
-setInterval(runGame, 1000);
+setInterval(runGame, 50);
+
+function animateBone() {
+bonePositions();
+drawBone();
+}
+
+setInterval(animateBone, 2000);
+
+//SCORE TRACKING (doesn't work yet)
+
+// var scoreText = document.querySelector(".score");
+//
+// function keepScore() {
+//
+// }
