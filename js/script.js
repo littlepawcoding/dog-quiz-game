@@ -16,12 +16,12 @@ function myFunction() {
 //CANVAS
 
 var canvas = document.querySelector("#screen");
-canvas.width = 500;
+canvas.width = 900;
 canvas.height = 500;
 
 var ctx = canvas.getContext("2d");
 
-// var maxheight = canvas.height * 0.3;
+var maxheight = canvas.height * 0.3;
 
 //STATE
 
@@ -36,12 +36,10 @@ var state = {
 
 //BACKGROUND
 
-var background = document.querySelector("#background");
-
 function drawBackground() {
-  var width = canvas.width;
-  var height = canvas.height;
-  ctx.drawImage(background, 0, 0, width, height);
+  var background = document.querySelector("#background");
+  var aspect = background.width/background.height;
+  ctx.drawImage(background, 0, 0, canvas.width, canvas.width * aspect);
 }
 
 //DOGGIE
@@ -115,6 +113,21 @@ moveDugDown();
 }
 
 body.addEventListener("keydown", handleKey);
+
+//COLLISION DETECTION
+
+// function dogBoneCollide() {
+//
+// if (doggie.x < bone.x + bone.width &&
+//    doggie.x + doggie.width > bone.x &&
+//    doggie.y < bone.y + bone.height &&
+//    doggie.y + doggie.height > bone.y) {
+//     // collision detected!
+//     var congrats=prompt("Yay!!")
+//     // increase the score
+//     // score++;
+// }
+// }
 
 //GAME
 
