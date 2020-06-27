@@ -140,7 +140,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #ffffff90;
-  margin: 1.5% 15%;
+  margin: 2% 10%;
   border-radius: 5px;
 }
 .dug-sign-logo {
@@ -185,24 +185,96 @@ footer {
 }
 
 /* MEDIA QUERIES: HOME PAGE */
-/* homepage mobile */
-@media (max-width: 320px) {
-  /* INDEX PAGE STYLES */
+@media (max-width: 1400px) {
   .home-wrapper {
-    margin: 10px;
+    margin: 1% 20%;
   }
   .dug-sign-logo {
-    width: auto;
-    height: 300px;
+    width: 440px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 4%;
+  }
+  .click-to-play-button a {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1073px) {
+  .home-wrapper {
+    margin: 1% 16%;
+  }
+  .dug-sign-logo {
+    width: 410px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 5%;
+  }
+  .click-to-play-button a {
+    font-size: 35px;
+  }
+}
+@media (max-width: 830px) {
+  .home-wrapper {
+    margin: 1% 15%;
+  }
+  .dug-sign-logo {
+    width: 350px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 5%;
+  }
+  .click-to-play-button a {
+    font-size: 35px;
+  }
+}
+@media (max-width: 650px) {
+  .home-wrapper {
+    margin: 1% 10%;
+  }
+  .dug-sign-logo {
+    width: 350px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 5%;
+  }
+  .click-to-play-button a {
+    font-size: 34px;
+  }
+}
+@media (max-width: 510px) {
+  .home-wrapper {
+    margin: 2% 7%;
+  }
+  .dug-sign-logo {
+    width: 340px;
+    height: auto;
   }
   .click-to-play-button {
     padding: 2% 2.5%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
   }
-
   .click-to-play-button a {
-    font-size: 20px;
-    letter-spacing: 1.5px;
+    font-size: 33px;
+  }
+}
+@media (min-width: 1400px) {
+  .home-wrapper {
+    margin: 1% 20%;
+  }
+  .dug-sign-logo {
+    width: 450px;
+    height: auto;
+  }
+  .click-to-play-button {
+    padding: 2% 2.5%;
+    margin-bottom: 2%;
+  }
+  .click-to-play-button a {
+    font-size: 40px;
   }
 }
 /* ////////////////////////////////////////////////////////////////////////////// */
