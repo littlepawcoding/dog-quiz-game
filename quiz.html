@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+
   </head>
   <body id="body">
     <!-- all content within wrapper -->
@@ -39,11 +40,24 @@
         <a href="game.html">Play!</a>
       </button> -->
 
+      <div id="quiz">
+        <h1 id="quiz-name"></h1>
+        <button id="next-question-button">Next Question</button>
+        <button id="submit-button">Submit Answers</button>
+      </div>
+
+      <div id="quiz-results">
+          <p id="quiz-results-message"></p>
+          <p id="quiz-results-score"></p>
+          <button id="quiz-retry-button"><a href="Quiz.html">Retry</a></button>
+      </div>
+
       <footer>
         Made by students from 23 Code Street <br />With a bit of &#10084; and a
         lot of &#x2615;
       </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/QuizJS.js"></script>
   </body>
 </html>
