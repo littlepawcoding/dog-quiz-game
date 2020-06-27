@@ -1,10 +1,21 @@
 /* Colours */
-/* #ECA802 yellow
+/* 
+#ECA802 yellow
 #00AB54 field green
 #B0413E reddish-pink
 #548687 blue
 #FFFFC7 off white
-#473335 dark purple */
+#473335 dark purple
+*/
+/* Media queries */
+/*
+common breakpoints: 
+- 320px to -480px for mobile
+- 481px to 768px for ipads, tablets
+- 769px to 1024px for small screens, laptops
+- 1025px to 1200px for desktops, large screens
+- 1201px or more for extra large screens, tv
+*/
 
 /* Fonts */
 @font-face {
@@ -122,14 +133,14 @@ footer {
   margin: 1.5%;
 }
 
-/* INDEX PAGE STYLES */
+/* HOMEPAGE STYLES */
 .home-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #ffffff90;
-  margin: 1.5% 15%;
+  margin: 2% 10%;
   border-radius: 5px;
 }
 .dug-sign-logo {
@@ -147,7 +158,7 @@ footer {
     transform: rotate(3deg);
   }
 }
-/* click to play button styles on homepage - takes user to how to play plage */
+/* click to play button styles on homepage - takes user to how to play page */
 .click-to-play-button {
   cursor: pointer;
   border-radius: 10px;
@@ -173,8 +184,102 @@ footer {
   text-decoration: none;
 }
 
-/* HOW TO PLAY PAGE STYLES */
+/* MEDIA QUERIES: HOME PAGE */
+@media (max-width: 1400px) {
+  .home-wrapper {
+    margin: 1% 20%;
+  }
+  .dug-sign-logo {
+    width: 440px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 4%;
+  }
+  .click-to-play-button a {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1073px) {
+  .home-wrapper {
+    margin: 1% 16%;
+  }
+  .dug-sign-logo {
+    width: 410px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 5%;
+  }
+  .click-to-play-button a {
+    font-size: 35px;
+  }
+}
+@media (max-width: 830px) {
+  .home-wrapper {
+    margin: 1% 15%;
+  }
+  .dug-sign-logo {
+    width: 350px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 5%;
+  }
+  .click-to-play-button a {
+    font-size: 35px;
+  }
+}
+@media (max-width: 650px) {
+  .home-wrapper {
+    margin: 1% 10%;
+  }
+  .dug-sign-logo {
+    width: 350px;
+    height: auto;
+  }
+  .click-to-play-button {
+    margin-bottom: 5%;
+  }
+  .click-to-play-button a {
+    font-size: 34px;
+  }
+}
+@media (max-width: 510px) {
+  .home-wrapper {
+    margin: 2% 7%;
+  }
+  .dug-sign-logo {
+    width: 340px;
+    height: auto;
+  }
+  .click-to-play-button {
+    padding: 2% 2.5%;
+    margin-bottom: 5%;
+  }
+  .click-to-play-button a {
+    font-size: 33px;
+  }
+}
+@media (min-width: 1400px) {
+  .home-wrapper {
+    margin: 1% 20%;
+  }
+  .dug-sign-logo {
+    width: 450px;
+    height: auto;
+  }
+  .click-to-play-button {
+    padding: 2% 2.5%;
+    margin-bottom: 2%;
+  }
+  .click-to-play-button a {
+    font-size: 40px;
+  }
+}
+/* ////////////////////////////////////////////////////////////////////////////// */
 
+/* HOW TO PLAY PAGE STYLES */
 .ready-box {
   display: flex;
   justify-content: center;
