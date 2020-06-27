@@ -189,60 +189,25 @@ footer {
 @media (max-width: 320px) {
   /* INDEX PAGE STYLES */
   .home-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff90;
-    /* margin: 1.5% 15%; */
-    /* border-radius: 5px; */
+    margin: 10px;
   }
   .dug-sign-logo {
     width: auto;
-    height: 30px;
-    /* padding: 1.5% 0; */
-    animation: rockingDug 2.5s infinite;
+    height: 300px;
   }
-  @keyframes rockingDug {
-    0%,
-    100% {
-      transform: rotate(-3deg);
-    }
-    50% {
-      transform: rotate(3deg);
-    }
-  }
-  /* click to play button styles on homepage - takes user to how to play page */
   .click-to-play-button {
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #7dcd90;
-    border: 2px solid #7dcd90;
-
     padding: 2% 2.5%;
     margin-bottom: 3%;
+  }
 
-    transition: all 0.3s ease 0s;
-    transition: transform 0.8s;
-  }
-  .click-to-play-button:hover {
-    transform: rotate(3deg);
-    background-color: #eca802;
-    border: 2px solid #eca802;
-  }
   .click-to-play-button a {
-    font-family: "Paw Font";
-    font-size: 40px;
-    color: black;
+    font-size: 20px;
     letter-spacing: 1.5px;
-    text-decoration: none;
   }
 }
-
 /* ////////////////////////////////////////////////////////////////////////////// */
 
 /* HOW TO PLAY PAGE STYLES */
-
 .ready-box {
   display: flex;
   justify-content: center;
