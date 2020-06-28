@@ -29,17 +29,22 @@ var state = {
   doggieX: 100,
   doggieY: 100,
   bonePosition: {
-  x: 0,
-  y: 0,
-}
+    x: 0,
+    y: 0,
+  },
 };
 
 //BACKGROUND
 
 function drawBackground() {
   var background = document.querySelector("#background");
-  var aspect = background.width/background.height;
+  var aspect = background.width / background.height;
   ctx.drawImage(background, 0, 0, canvas.width, canvas.width * aspect);
+  // draw score
+  ctx.fillStyle = "black";
+  ctx.font = "45px Dog Font";
+  ctx.textAlign = "right";
+  ctx.fillText("Score : " + score, 850, 50);
 }
 
 //DOGGIE
@@ -63,53 +68,52 @@ function drawBone(boneInfo) {
   var height = 47;
   var xPosition = state.bonePosition.x;
   var yPosition = state.bonePosition.y;
-ctx.drawImage(bone, xPosition, yPosition, width, height);
+  ctx.drawImage(bone, xPosition, yPosition, width, height);
 }
 
 function bonePositions() {
-var numberX = Math.random() * (canvas.width - 25);
-var numberY = Math.random() * (canvas.height - 25);
-state.bonePosition.x = numberX;
-state.bonePosition.y = numberY;
+  var numberX = Math.random() * (canvas.width - 25);
+  var numberY = Math.random() * (canvas.height - 25);
+  state.bonePosition.x = numberX;
+  state.bonePosition.y = numberY;
 }
 
 // MOVEMENT
 
 function moveDugLeft() {
-state.doggieX -= 5;
+  state.doggieX -= 5;
 }
 
 function moveDugRight() {
-state.doggieX += 5;
+  state.doggieX += 5;
 }
 
 function moveDugUp() {
-state.doggieY -= 5;
+  state.doggieY -= 5;
 }
 
 function moveDugDown() {
-state.doggieY += 5;
+  state.doggieY += 5;
 }
 
 //EVENT HANDLING
 
 function handleKey(e) {
+  if (e.key === "ArrowLeft") {
+    moveDugLeft();
+  }
 
-if (e.key === "ArrowLeft"){
-moveDugLeft();
-}
+  if (e.key === "ArrowRight") {
+    moveDugRight();
+  }
 
-if (e.key === "ArrowRight"){
-moveDugRight();
-}
+  if (e.key === "ArrowUp") {
+    moveDugUp();
+  }
 
-if (e.key === "ArrowUp"){
-moveDugUp();
-}
-
-if (e.key === "ArrowDown"){
-moveDugDown();
-}
+  if (e.key === "ArrowDown") {
+    moveDugDown();
+  }
 }
 
 body.addEventListener("keydown", handleKey);
@@ -139,11 +143,11 @@ function runGame() {
 
 setInterval(runGame, 50);
 
-function animateBone() {
-bonePositions();
-}
+// function animateBone() {
+// bonePositions();
+// }
 
-setInterval(animateBone, 2000);
+// setInterval(animateBone, 2000);
 
 //SCORE TRACKING (doesn't work yet)
 
