@@ -29,8 +29,8 @@ var state = {
   doggieX: 100,
   doggieY: 100,
   bonePosition: {
-    x: 0,
-    y: 0,
+    x: 100,
+    y: 100,
   },
 };
 
@@ -114,24 +114,13 @@ function handleKey(e) {
   if (e.key === "ArrowDown") {
     moveDugDown();
   }
+  //COLLISION DETECTION
+  if (state.doggieX == state.bonePosition.x - 50) {
+    score++;
+  }
 }
 
 body.addEventListener("keydown", handleKey);
-
-//COLLISION DETECTION
-
-// function dogBoneCollide() {
-//
-// if (doggie.x < bone.x + bone.width &&
-//    doggie.x + doggie.width > bone.x &&
-//    doggie.y < bone.y + bone.height &&
-//    doggie.y + doggie.height > bone.y) {
-//     // collision detected!
-//     var congrats=prompt("Yay!!")
-//     // increase the score
-//     // score++;
-// }
-// }
 
 //GAME
 
