@@ -29,9 +29,11 @@ var state = {
 };
 
 //BACKGROUND
+
+var background = document.querySelector("#background");
+
 function drawBackground() {
   // draw background
-  var background = document.querySelector("#background");
   var aspect = background.width / background.height;
   ctx.drawImage(background, 0, 0, canvas.width, canvas.width * aspect);
   // draw score
@@ -42,10 +44,12 @@ function drawBackground() {
 }
 
 //DOGGIE
+
+var doggie = document.querySelector("#doggie");
+
 function drawDug() {
   var doggieX = state.doggieX;
   var doggieY = state.doggieY;
-  var doggie = document.querySelector("#doggie");
   var width = 84;
   var height = 84;
   ctx.drawImage(doggie, doggieX, doggieY, width, height);
@@ -53,10 +57,12 @@ function drawDug() {
 
 //BONES
 // draw bones
+
+var bone = document.querySelector("#bone");
+
 function drawBone() {
   var xPosition = state.bonePosition.x;
   var yPosition = state.bonePosition.y;
-  var bone = document.querySelector("#bone");
   var width = 96;
   var height = 47;
   ctx.drawImage(bone, xPosition, yPosition, width, height);
