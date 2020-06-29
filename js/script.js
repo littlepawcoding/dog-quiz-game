@@ -1,9 +1,7 @@
 //GLOBAL VARIABLES
-
 var score = 0;
 
 //BURGER MENU
-
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -14,17 +12,13 @@ function myFunction() {
 }
 
 //CANVAS
-
 var canvas = document.querySelector("#screen");
 canvas.width = 900;
 canvas.height = 500;
-
 var ctx = canvas.getContext("2d");
-
 var maxheight = canvas.height * 0.3;
 
 //STATE
-
 var state = {
   doggieX: 100,
   doggieY: 100,
@@ -35,8 +29,8 @@ var state = {
 };
 
 //BACKGROUND
-
 function drawBackground() {
+  // draw background
   var background = document.querySelector("#background");
   var aspect = background.width / background.height;
   ctx.drawImage(background, 0, 0, canvas.width, canvas.width * aspect);
@@ -48,74 +42,66 @@ function drawBackground() {
 }
 
 //DOGGIE
-
-var doggie = document.querySelector("#doggie");
-
+var doggieX = state.doggieX;
+var doggieY = state.doggieY;
 function drawDug() {
+  var doggie = document.querySelector("#doggie");
   var width = 84;
   var height = 84;
-  var doggieX = state.doggieX;
-  var doggieY = state.doggieY;
-  ctx.drawImage(doggie, state.doggieX, state.doggieY, width, height);
+  ctx.drawImage(doggie, doggieX, doggieY, width, height);
 }
 
 //BONES
-
-var bone = document.querySelector("#bone");
-
+// draw bones
 function drawBone(boneInfo) {
+  var bone = document.querySelector("#bone");
   var width = 96;
   var height = 47;
   var xPosition = state.bonePosition.x;
   var yPosition = state.bonePosition.y;
   ctx.drawImage(bone, xPosition, yPosition, width, height);
 }
-
+var numberX = Math.round(Math.random() * (canvas.width - 25));
+var numberY = Math.round(Math.random() * (canvas.height - 25));
+// bone movement
 function bonePositions() {
-  var numberX = Math.random() * (canvas.width - 25);
-  var numberY = Math.random() * (canvas.height - 25);
   state.bonePosition.x = numberX;
   state.bonePosition.y = numberY;
+  console.log(numberX);
+  console.log(numberY);
 }
+bonePositions();
 
-// MOVEMENT
-
+// DOG MOVEMENT
 function moveDugLeft() {
-  state.doggieX -= 5;
+  doggieX -= 5;
 }
-
 function moveDugRight() {
-  state.doggieX += 5;
+  doggieX += 5;
 }
-
 function moveDugUp() {
-  state.doggieY -= 5;
+  doggieY -= 5;
 }
-
 function moveDugDown() {
-  state.doggieY += 5;
+  doggieY += 5;
 }
 
 //EVENT HANDLING
-
 function handleKey(e) {
   if (e.key === "ArrowLeft") {
     moveDugLeft();
   }
-
   if (e.key === "ArrowRight") {
     moveDugRight();
   }
-
   if (e.key === "ArrowUp") {
     moveDugUp();
   }
-
   if (e.key === "ArrowDown") {
     moveDugDown();
   }
   //COLLISION DETECTION
-  if (state.doggieX == state.bonePosition.x - 50) {
+  if (doggieX == numberX - 50 || doggieX == numberY - 50) {
     score++;
   }
 }
@@ -123,7 +109,7 @@ function handleKey(e) {
 body.addEventListener("keydown", handleKey);
 
 //GAME
-
+// runs full game
 function runGame() {
   drawBackground();
   drawDug();
@@ -131,17 +117,3 @@ function runGame() {
 }
 
 setInterval(runGame, 50);
-
-// function animateBone() {
-// bonePositions();
-// }
-
-// setInterval(animateBone, 2000);
-
-//SCORE TRACKING (doesn't work yet)
-
-// var scoreText = document.querySelector(".score");
-//
-// function keepScore() {
-//
-// }
