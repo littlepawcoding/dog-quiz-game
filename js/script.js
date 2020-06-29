@@ -61,16 +61,17 @@ function drawBone(boneInfo) {
   var yPosition = state.bonePosition.y;
   ctx.drawImage(bone, xPosition, yPosition, width, height);
 }
-var numberX = Math.round(Math.random() * (canvas.width - 25));
-var numberY = Math.round(Math.random() * (canvas.height - 25));
+
 // bone movement
 function bonePositions() {
+  var numberX = Math.round(Math.random() * (canvas.width - 25));
+  var numberY = Math.round(Math.random() * (canvas.height - 25));
   state.bonePosition.x = numberX;
   state.bonePosition.y = numberY;
   console.log(numberX);
   console.log(numberY);
 }
-bonePositions();
+// bonePositions();
 
 // DOG MOVEMENT
 function moveDugLeft() {
@@ -105,7 +106,10 @@ function handleKey(e) {
 
 function dugBoneCollision() {
   //COLLISION DETECTION
-  if (doggieX == numberX - 50 || doggieX == numberY - 50) {
+  if (
+    doggieX == state.bonePosition.x - 50 ||
+    doggieY == state.bonePosition.y - 50
+  ) {
     score++;
     bonePositions();
   }
@@ -119,6 +123,7 @@ function runGame() {
   drawBackground();
   drawDug();
   drawBone();
+  dugBoneCollision();
 }
 
 setInterval(runGame, 50);
