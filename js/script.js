@@ -53,7 +53,6 @@ function drawDug() {
 
 //BONES
 // draw bones
-
 function drawBone() {
   var xPosition = state.bonePosition.x;
   var yPosition = state.bonePosition.y;
@@ -74,8 +73,10 @@ function bonePositions() {
 function dugBoneCollision() {
   //COLLISION DETECTION
   if (
-    state.doggieX == state.bonePosition.x - 50 ||
-    state.doggieY == state.bonePosition.y - 50
+    state.doggieX < state.bonePosition.x + 96 &&
+    state.doggieX > state.bonePosition.x &&
+    doggie.y < state.bonePosition.y + 47 &&
+    state.doggieY > state.bonePosition.y
   ) {
     score++;
     bonePositions();
