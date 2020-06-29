@@ -42,24 +42,28 @@ function drawBackground() {
 }
 
 //DOGGIE
-var doggieX = state.doggieX;
-var doggieY = state.doggieY;
+
 function drawDug() {
+  var doggieX = state.doggieX;
+  var doggieY = state.doggieY;
   var doggie = document.querySelector("#doggie");
   var width = 84;
   var height = 84;
   ctx.drawImage(doggie, doggieX, doggieY, width, height);
+  // console.log(doggieX, doggieY);
 }
 
 //BONES
 // draw bones
-function drawBone(boneInfo) {
+
+function drawBone() {
+  var xPosition = state.bonePosition.x;
+  var yPosition = state.bonePosition.y;
   var bone = document.querySelector("#bone");
   var width = 96;
   var height = 47;
-  var xPosition = state.bonePosition.x;
-  var yPosition = state.bonePosition.y;
   ctx.drawImage(bone, xPosition, yPosition, width, height);
+  bonePositions();
 }
 
 // bone movement
@@ -71,20 +75,42 @@ function bonePositions() {
   console.log(numberX);
   console.log(numberY);
 }
-bonePositions();
 
+function dugBoneCollision() {
+  //COLLISION DETECTION
+  if (
+    state.doggieX == state.bonePosition.x - 50 ||
+    state.doggieX == state.bonePosition.y - 50
+  ) {
+    score++;
+    drawBone();
+  }
+}
+
+//GAME - runs full game
+// things that run automatically through set interval
+function runGame() {
+  drawBackground();
+  drawDug();
+  // drawBone();
+  dugBoneCollision();
+}
+
+setInterval(runGame, 50);
+
+// funtions that run through event listeners
 // DOG MOVEMENT
 function moveDugLeft() {
-  doggieX -= 5;
+  state.doggieX -= 5;
 }
 function moveDugRight() {
-  doggieX += 5;
+  state.doggieX += 5;
 }
 function moveDugUp() {
-  doggieY -= 5;
+  state.doggieY -= 5;
 }
 function moveDugDown() {
-  doggieY += 5;
+  state.doggieY += 5;
 }
 
 //EVENT HANDLING
@@ -103,26 +129,4 @@ function handleKey(e) {
   }
   dugBoneCollision();
 }
-
-function dugBoneCollision() {
-  //COLLISION DETECTION
-  if (
-    doggieX == state.bonePosition.x - 50 ||
-    doggieX == state.bonePosition.y - 50
-  ) {
-    score++;
-    bonePositions();
-  }
-}
-
 body.addEventListener("keydown", handleKey);
-
-//GAME
-// runs full game
-function runGame() {
-  drawBackground();
-  drawDug();
-  drawBone();
-}
-
-setInterval(runGame, 50);
