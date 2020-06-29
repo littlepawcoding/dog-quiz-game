@@ -80,9 +80,6 @@ header {
     transform: rotate(4deg);
   }
 }
-/* .logo:hover {
-  transform: rotate(-10deg);
-} */
 .nav {
   background-color: #333;
   position: relative;
@@ -337,19 +334,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2%;
-}
-.score {
-  font-size: 50px;
-  font-family: "Dog Font";
-
-  position: absolute;
-  top: 25%;
-  right: 25%;
-
-  border: 5px solid #eca802;
-  border-radius: 10px;
-  padding: 0.5% 0.9%;
+  margin: 4%;
 }
 canvas {
   /* width: 80%;
@@ -410,7 +395,9 @@ table th {
 /******************* QUIZ PAGE STYLES *********************/
 
 /* All buttons */
-#submit-button, #next-question-button, #quiz-retry-button {
+#submit-button,
+#next-question-button,
+#quiz-retry-button {
   cursor: pointer;
   border-radius: 10px;
   background-color: #7dcd90;
@@ -429,7 +416,7 @@ table th {
 }
 
 /* Hover style for buttons*/
-#quiz button:hover{
+#quiz button:hover {
   transform: rotate(3deg);
   background-color: #eca802;
 }
@@ -437,8 +424,8 @@ table th {
 /* Disabled style */
 #quiz button:disabled {
   opacity: 0.5;
-  background: #9ACFCC;
-  color: #00403C;
+  background: #9acfcc;
+  color: #00403c;
   cursor: default;
 }
 
@@ -450,7 +437,7 @@ table th {
   font-size: 30px;
 }
 
-  #question {
+#question {
   font-family: "Paw Font";
   font-size: 20px;
   font-weight: bold;
@@ -460,15 +447,15 @@ table th {
   padding: 20px;
   background: #7dcd90;
   text-align: center;
-  }
+}
 
-#question input[type=radio] {
+#question input[type="radio"] {
   display: none;
 }
 
-#question input[type=radio]:checked + label {
+#question input[type="radio"]:checked + label {
   background: #eca802;
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 #question label {
@@ -476,20 +463,19 @@ table th {
   justify-content: center;
   margin: 4px;
   padding: 8px;
-  background: #FAE3BB;
-  color: #4C3000;
+  background: #fae3bb;
+  color: #4c3000;
   width: calc(50% - 8px);
   min-width: 50px;
   cursor: pointer;
-  border-radius: 10px
+  border-radius: 10px;
 }
 
 #question label:hover {
   background: #eca802;
 }
 
-
-  /* QUIZ RESULTS STYLES */
+/* QUIZ RESULTS STYLES */
 
 #quiz-results {
   display: flex;
@@ -508,11 +494,10 @@ table th {
   padding: 20px;
   background: #7dcd90;
   text-align: center;
-  }
-
+}
 
 #quiz-retry-button {
-    background-color: #FAE3BB
+  background-color: #fae3bb;
 }
 
 #quiz-retry-button a {
@@ -522,7 +507,7 @@ table th {
 }
 
 #quiz-retry-button:hover {
-    background-color: #eca802;
+  background-color: #eca802;
 }
 
 #quiz-results-message {
