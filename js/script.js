@@ -42,7 +42,6 @@ function drawBackground() {
 }
 
 //DOGGIE
-
 function drawDug() {
   var doggieX = state.doggieX;
   var doggieY = state.doggieY;
@@ -50,7 +49,6 @@ function drawDug() {
   var width = 84;
   var height = 84;
   ctx.drawImage(doggie, doggieX, doggieY, width, height);
-  // console.log(doggieX, doggieY);
 }
 
 //BONES
@@ -63,7 +61,6 @@ function drawBone() {
   var width = 96;
   var height = 47;
   ctx.drawImage(bone, xPosition, yPosition, width, height);
-  bonePositions();
 }
 
 // bone movement
@@ -83,7 +80,7 @@ function dugBoneCollision() {
     state.doggieX == state.bonePosition.y - 50
   ) {
     score++;
-    drawBone();
+    bonePositions();
   }
 }
 
@@ -92,13 +89,13 @@ function dugBoneCollision() {
 function runGame() {
   drawBackground();
   drawDug();
-  // drawBone();
+  drawBone();
   dugBoneCollision();
 }
 
 setInterval(runGame, 50);
 
-// funtions that run through event listeners
+// things that run through event listeners
 // DOG MOVEMENT
 function moveDugLeft() {
   state.doggieX -= 5;
@@ -127,6 +124,6 @@ function handleKey(e) {
   if (e.key === "ArrowDown") {
     moveDugDown();
   }
-  dugBoneCollision();
+  // dugBoneCollision();
 }
 body.addEventListener("keydown", handleKey);
