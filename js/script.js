@@ -71,7 +71,7 @@ function bonePositions() {
   console.log(numberX);
   console.log(numberY);
 }
-// bonePositions();
+bonePositions();
 
 // DOG MOVEMENT
 function moveDugLeft() {
@@ -108,7 +108,7 @@ function dugBoneCollision() {
   //COLLISION DETECTION
   if (
     doggieX == state.bonePosition.x - 50 ||
-    doggieY == state.bonePosition.y - 50
+    doggieX == state.bonePosition.y - 50
   ) {
     score++;
     bonePositions();
@@ -123,7 +123,6 @@ function runGame() {
   drawBackground();
   drawDug();
   drawBone();
-  dugBoneCollision();
 }
 
 setInterval(runGame, 50);
