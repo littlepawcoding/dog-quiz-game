@@ -69,15 +69,13 @@ function bonePositions() {
   var numberY = Math.round(Math.random() * (canvas.height - 25));
   state.bonePosition.x = numberX;
   state.bonePosition.y = numberY;
-  console.log(numberX);
-  console.log(numberY);
 }
 
 function dugBoneCollision() {
   //COLLISION DETECTION
   if (
     state.doggieX == state.bonePosition.x - 50 ||
-    state.doggieX == state.bonePosition.y - 50
+    state.doggieY == state.bonePosition.y - 50
   ) {
     score++;
     bonePositions();
