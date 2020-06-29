@@ -100,9 +100,14 @@ function handleKey(e) {
   if (e.key === "ArrowDown") {
     moveDugDown();
   }
+  dugBoneCollision();
+}
+
+function dugBoneCollision() {
   //COLLISION DETECTION
   if (doggieX == numberX - 50 || doggieX == numberY - 50) {
     score++;
+    bonePositions();
   }
 }
 
