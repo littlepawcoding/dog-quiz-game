@@ -1,5 +1,5 @@
 /* Colours */
-/* 
+/*
 #ECA802 yellow
 #00AB54 field green
 #B0413E reddish-pink
@@ -9,7 +9,7 @@
 */
 /* Media queries */
 /*
-common breakpoints: 
+common breakpoints:
 - 320px to -480px for mobile
 - 481px to 768px for ipads, tablets
 - 769px to 1024px for small screens, laptops
@@ -340,6 +340,12 @@ canvas {
   /* width: 80%;
   height: 80%; */
   border-radius: 5px;
+}
+
+#countdown {
+  color: "black";
+  font-size: 45px;
+  font-family: "Dog Font";
 }
 
 /* HIGH SCORES PAGE STYLES */
