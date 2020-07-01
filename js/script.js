@@ -99,7 +99,7 @@ var downloadTimer = setInterval(function(){
     window.location.replace("quiz.html");
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
-    alert("Yay!! You're the cat's (or dog's) pyjamas!");
+    // alert("Yay!! You're the cat's (or dog's) pyjamas!");
   }
   timeleft -= 1;
 }, 1000);
