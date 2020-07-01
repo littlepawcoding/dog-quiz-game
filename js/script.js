@@ -100,7 +100,7 @@ var downloadTimer = setInterval(function(){
   }
   if(timeleft <= 0 && score >= 3){
     clearInterval(downloadTimer);
-    alert("Yay!! You're the cat's (or dog's) pyjamas!");
+    alert("Yay!! You're the cat's (or dog's) pyjamas! 🐾");
   }
   else {
     document.getElementById("countdown").innerHTML = timeleft;
