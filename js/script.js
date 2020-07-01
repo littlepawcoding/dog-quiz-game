@@ -97,9 +97,13 @@ var downloadTimer = setInterval(function(){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "0";
     window.location.replace("quiz.html");
-  } else {
+  }
+  if(timeleft <= 0 && score >= 3){
+    clearInterval(downloadTimer);
+    alert("Yay!! You're the cat's (or dog's) pyjamas!");
+  }
+  else {
     document.getElementById("countdown").innerHTML = timeleft;
-    // alert("Yay!! You're the cat's (or dog's) pyjamas!");
   }
   timeleft -= 1;
 }, 1000);
