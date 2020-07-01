@@ -23,8 +23,8 @@ var state = {
   doggieX: 100,
   doggieY: 100,
   bonePosition: {
-    x: 100,
-    y: 100,
+    x: 200,
+    y: 200,
   },
 };
 
@@ -91,13 +91,15 @@ function dugBoneCollision() {
 
 //TIMER
 
-var timeleft = 10;
+var timeleft = 15;
 var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){
+  if(timeleft <= 0 && score < 3){
     clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Finished";
+    document.getElementById("countdown").innerHTML = "0";
+    window.location.replace("quiz.html");
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
+    alert("Yay!! You're the cat's (or dog's) pyjamas!");
   }
   timeleft -= 1;
 }, 1000);
