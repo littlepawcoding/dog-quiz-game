@@ -80,6 +80,11 @@ header {
     transform: rotate(4deg);
   }
 }
+#countdown {
+  color: "black";
+  font-size: 45px;
+  font-family: "Dog Font";
+}
 .nav {
   background-color: #333;
   position: relative;
@@ -340,12 +345,6 @@ canvas {
   /* width: 80%;
   height: 80%; */
   border-radius: 5px;
-}
-
-#countdown {
-  color: "black";
-  font-size: 45px;
-  font-family: "Dog Font";
 }
 
 /* HIGH SCORES PAGE STYLES */
