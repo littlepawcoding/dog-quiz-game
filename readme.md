@@ -2,6 +2,9 @@
 
 > Collaborative final project for 23 Code Street
 
+## Play the game here:
+https://littlepawcoding.github.io/dog-quiz-game/index.html
+
 ## The idea:
 
 A game/quiz to help make learning to code a little more fun!
@@ -13,10 +16,6 @@ Help Dug collect bones from the field. After 30 seconds you'll be given a code-r
 - Get it right? Continue to play!
 - Get it wrong? It's game over - add yourself to the leaderboard.
 - **How many bones can you collect before the timer runs out?**
-
-http://colorsafe.co/
-
-- make some note about how we thought about accessibility
 
 ---
 
